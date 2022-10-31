@@ -31,7 +31,6 @@ public abstract class Telephone{
 
     public abstract void chat();
     public abstract void call();
-
 }
  /***
 public class Smartphone extends Telephone 
@@ -57,6 +56,31 @@ Implementasi encapsulation dengan menggunakan access modifier seperti private
 ...
 ```
 
+## Abstraction
+
+Superclass **`Telephone`** menggunakan modifier abstract untuk menggunakan `Telephone` sebagai tamplate kelas lain.
+
+```java
+public abstract class Telephone{
+    private String phoneNumber;
+
+    Telephone(String phoneNumber){
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getPhoneNumber(){
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public abstract void chat();
+    public abstract void call();
+}
+```
+
 ## Polymorphism
 
 Saya menurunkan kelas **`Telephone`** menjadi beberapa subclass. Subclass tersebut memiliki method yang sama yaitu, chat( ) dan call( ). Setiap jenis Smartphone memiliki hasil method yang berbeda
@@ -72,7 +96,3 @@ Saya menurunkan kelas **`Telephone`** menjadi beberapa subclass. Subclass terseb
     }
 ...
 ```
-
-## Abstraction
-
-Superclass **`Telephone`** menggunakan modifier abstract untuk menggunakan `Telephone` sebagai tamplate kelas lain.
