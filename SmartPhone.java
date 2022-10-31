@@ -1,9 +1,13 @@
 public class SmartPhone extends Telephone{
-    public String brand;
+    private String brand;
 
     SmartPhone(String phoneNumber, String brand){
         super(phoneNumber);
         this.brand = brand;
+    }
+
+    public String getBrand(){
+        return brand;
     }
 
     public void chat(){
